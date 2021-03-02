@@ -1,5 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap");
+
+:root {
+  --logo-font: "Bilbo Swash Caps", cursive;
+  --title-font: "Open Sans Condensed", sans-serif;
+}
+
+:root {
+  --body-font: "Open Sans", sans-serif;
+}
+
+body {
+  font-family: var(--body-font);
+}
+
+.headerLogo {
+  font-family: var(--logo-font);
+  font-size: 36px;
+  padding: 10px;
+}
+
+.headerItem {
+  font-family: var(--title-font);
+  font-size: 26px;
+  padding: 10px;
+}
+
 .App {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "conteudo"
+    "footer";
+  grid-gap: 20px;
+  gap: 20px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.navPrincipal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header {
+  grid-area: header;
+  box-shadow: 5px 5px 10px;
+}
+
+.conteudo {
+  grid-area: conteudo;
+  display: grid;
+  width: 80%;
+  gap: 20px;
+  justify-self: center;
+  grid-template-areas:
+    "titulo titulo"
+    "img form";
+  grid-template-columns: 1fr 1fr;
+}
+
+.contatoTitulo {
+  grid-area: titulo;
   text-align: center;
+}
+
+.contatoImg {
+  grid-area: img;
+  justify-self: start;
+}
+
+.contatoForm {
+  grid-area: form;
+  display: block;
+  width: 100%;
+}
+
+.inputWrapper {
+  display: block;
+  margin-bottom: 20px;
+  align-self: start;
+  justify-self: start;
+}
+
+.inputLabel {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  justify-self: start;
+}
+
+.inputText {
+  width: 80%;
+  justify-self: start;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.copyFooter {
+  font-size: 16px;
+  font-weight: bolder;
 }
 
 .App-logo {
