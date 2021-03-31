@@ -1,0 +1,32 @@
+.container-drinks {
+  display: grid;
+  width: 80%;
+  gap: 20px;
+  justify-self: center;
+  grid-template-areas:
+    "titulo-drinks titulo-drinks"
+    "gerador-drinks drink";
+  grid-template-columns: 1fr 1fr;
+}
+
+.container-drinks {
+  display: flex;
+  justify-content: center;
+}
+.titulo-drinks {
+  grid-area: titulo-drinks;
+  grid-area: titulo-sobrenos;
+  text-align: center;
+  font-family: var(--title-font);
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--main-color);
+  text-align: center;
+  margin-top: 20px;
+  padding: 50px;
+}
+
+.gerador-drinks {
+  grid-area: gerador-drinks;
+  width: 50%;
+}

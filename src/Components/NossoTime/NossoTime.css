@@ -1,0 +1,57 @@
+.container-nossotime {
+  display: flex;
+  justify-content: center;
+}
+.nossotime {
+  display: grid;
+  width: 80%;
+  gap: 20px;
+  justify-self: center;
+  grid-template-areas:
+    "titulo-nossotime titulo-nossotime"
+    "pessoa1 pessoa2"
+    "pessoa3 pessoa4";
+  grid-template-columns: 1fr 1fr;
+}
+.titulo-nossotime {
+  grid-area: titulo-nossotime;
+  text-align: center;
+  font-family: var(--title-font);
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--main-color);
+  text-align: center;
+  margin-top: 20px;
+  padding: 50px;
+}
+
+.pessoa1 {
+  grid-area: pessoa1;
+}
+
+.pessoa2 {
+  grid-area: pessoa2;
+}
+
+.pessoa3 {
+  grid-area: pessoa3;
+}
+
+.pessoa4 {
+  grid-area: pessoa4;
+}
+
+.pessoas {
+  display: flex;
+}
+
+.pessoas > h2 {
+  font-family: var(--body-font);
+  font-size: 18px;
+  color: #101010;
+  font-weight: 700;
+}
+
+.pessoas > img {
+  margin-right: 10px;
+}

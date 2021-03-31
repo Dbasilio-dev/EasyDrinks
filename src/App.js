@@ -1,44 +1,58 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Teste from "./Teste";
-import contatoImg from "./imgs/contact-pic.jpg";
+import Contatos from "./Components/Contatos/Contatos";
+import SobreNos from "./Components/SobreNos/SobreNos";
+import Home from "./Components/Home/Home";
+import NossoTime from "./Components/NossoTime/NossoTime";
+import Drinks from "./Components/Drinks/Drinks";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   return (
-    <div className="contato">
-      <div className="header">
-        <nav className="navPrincipal">
-          <a className="headerItem">Drinks</a>
-          <a className="headerItem">Sobre Nós</a>
-          <a className="headerLogo">Bons Drinks</a>
-          <a className="headerItem">Nosso Time</a>
-          <a className="headerItem">Contato</a>
-        </nav>
+    <Router>
+      <div className="contato">
+        <div className="header">
+          <nav className="navPrincipal">
+            <Link to="/Drinks" className="headerItem">
+              Drinks
+            </Link>
+            <Link to="/SobreNos" className="headerItem">
+              Sobre Nós
+            </Link>
+            <Link to="/" className="headerLogo">
+              Bons Drinks
+            </Link>
+            <Link to="/NossoTime" className="headerItem">
+              Nosso Time
+            </Link>
+            <Link to="/Contatos" className="headerItem">
+              Contato
+            </Link>
+          </nav>
+        </div>
       </div>
-      <div className="conteudo">
-        <h1 className="contatoTitulo">Contato</h1>
-        <img src={contatoImg} className="contatoImg"></img>
-        <form className="contatoForm">
-          <div className="inputWrapper">
-            <label className="inputLabel">Nome:</label>
-            <input type="text" className="inputText"></input>
-          </div>
-          <div className="inputWrapper">
-            <label className="inputLabel">Email:</label>
-            <input type="text" className="inputText"></input>
-          </div>
-          <div className="inputWrapper">
-            <label className="inputLabel">Mensagem:</label>
-            <textarea rows="5" colums="5">
-              sss
-            </textarea>
-          </div>
-        </form>
-      </div>
+
+      <Switch>
+        <Route path="/SobreNos">
+          <SobreNos></SobreNos>
+        </Route>
+        <Route path="/Contatos">
+          <Contatos />
+        </Route>
+        <Route exact path="/">
+          <Home></Home>
+        </Route>
+        <Route path="/NossoTime">
+          <NossoTime></NossoTime>
+        </Route>
+        <Route path="/Drinks">
+          <Drinks></Drinks>
+        </Route>
+      </Switch>
       <div className="footer">
         <p className="copyFooter">Resilia 2020 - Alguns direitos reservados</p>
       </div>
-    </div>
+    </Router>
   );
 }
 

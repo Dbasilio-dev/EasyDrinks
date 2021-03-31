@@ -1,0 +1,40 @@
+.container-sobrenos {
+  display: flex;
+  justify-content: center;
+}
+
+.sobrenos {
+  display: grid;
+  width: 80%;
+  gap: 20px;
+  justify-self: center;
+  grid-template-areas:
+    "titulo-sobrenos titulo-sobrenos"
+    "img-sobrenos-container text-area-sobrenos";
+  grid-template-columns: 1fr 1fr;
+}
+
+.titulo-sobrenos {
+  grid-area: titulo-sobrenos;
+  text-align: center;
+  font-family: var(--title-font);
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--main-color);
+  text-align: center;
+  margin-top: 20px;
+  padding: 50px;
+}
+
+.text-area-sobrenos > p {
+  font-family: var(--body-font);
+  font-size: 15pt;
+}
+
+.img-sobrenos-container {
+  grid-area: img-sobrenos-container;
+}
+
+.text-area-sobrenos {
+  grid-area: text-area-sobrenos;
+}
